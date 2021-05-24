@@ -1,7 +1,6 @@
 <h1>Alura </h1>
 <ap-photo
-url="https://mundoviajar.com.br/wp-content/uploads/2018/11/Vancouver4.jpg"
-description="Vancouver"></ap-photo>
-<ap-photo
-url="https://catracalivre.com.br/wp-content/thumbnails/EzJRSItJWVM5uaAjJ3xyrmnx13A=/wp-content/uploads/2019/05/canada-toronto-intercambio-910x607.jpg"
-description="Toronto"></ap-photo>
+  *ngFor="let photo of photos"
+  [url]="photo.url"
+  [description]="photo.description">
+</ap-photo>
