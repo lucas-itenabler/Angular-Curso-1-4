@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+
   photos: any[] = [];
 
   constructor(photoService: PhotoService){
