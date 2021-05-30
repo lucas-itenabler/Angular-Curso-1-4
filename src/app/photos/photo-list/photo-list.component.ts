@@ -7,15 +7,15 @@ import { Photo } from '../photo/photo';
 @Component({
   selector: 'app-photo-list',
   templateUrl: './photo-list.component.html',
-  styleUrls: ['./photo-list.component.scss']
+  styleUrls: ['./photo-list.component.css']
 })
 export class PhotoListComponent implements OnInit {
 
   photos: Photo[] = [];
-  filter = '';
-  hasMore = true;
-  currentPage = 1;
-  userName = '';
+  filter: string = '';
+  hasMore: boolean = true;
+  currentPage: number = 1;
+  userName:string  = '';
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -28,6 +28,7 @@ export class PhotoListComponent implements OnInit {
       this.photos = this.activatedRoute.snapshot.data.photos;
     });
   }
+
   load(): void {
     this.photoService
     .listFromUserPaginated(this.userName, ++this.currentPage)

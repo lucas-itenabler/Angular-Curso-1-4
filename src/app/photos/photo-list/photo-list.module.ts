@@ -1,3 +1,4 @@
+import { SearchComponent } from './search/search.component';
 import { CardModule } from './../../shared/components/card/card.module';
 import { PhotoModule } from './../photo/photo.module';
 import { FilterByDescription } from './filter-by-description.pipe';
@@ -12,7 +13,8 @@ import { CommonModule } from '@angular/common';
         PhotoListComponent,
         PhotosComponent,
         LoadButtonComponent,
-        FilterByDescription
+        FilterByDescription,
+        SearchComponent
     ],
     imports: [
       CommonModule,
