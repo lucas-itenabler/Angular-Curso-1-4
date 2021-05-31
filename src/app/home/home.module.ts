@@ -1,3 +1,4 @@
+import { HomeRoutingModule } from './home.routing.modules';
 import { SignUpService } from './singup/signup.service';
 import { SignUpComponent } from './singup/signup.component';
 import { RouterModule } from '@angular/router';
@@ -18,7 +19,8 @@ import { HomeComponent } from './home.component';
       CommonModule,
       FormsModule,
       VMessageModule,
-      RouterModule
+      RouterModule,
+      HomeRoutingModule
     ],
     providers: [
       SignUpService,
