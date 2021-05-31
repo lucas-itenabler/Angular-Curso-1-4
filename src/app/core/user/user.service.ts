@@ -13,6 +13,7 @@ export class UserService {
   private userName = '';
 
   constructor(private tokenService: TokenService) {
+
     this.tokenService.hasToken() &&
       this.decodeAndNotify();
    }
