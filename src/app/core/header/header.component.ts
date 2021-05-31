@@ -13,12 +13,18 @@ export class HeaderComponent {
 
   user$: Observable<User | null > = new Observable<User | null> () ;
 
-  constructor( userService: UserService,
+  constructor(
+    private userService: UserService,
     private router: Router) {
+
     this.user$ = userService.getUser();
 
   }
 
+  logout(): void {
+    this.userService.logout();
+    this.router.navigate(['']);
+  }
 
 
 }
